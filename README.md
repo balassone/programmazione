@@ -1,4 +1,4 @@
-![Logo](notion://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc0496f59-91fd-4eb7-bfda-ba207d8daf6a%2FFrancesco_balassone.png?table=block&id=a6b7b4ee-563b-46e8-b584-2db62057450b&spaceId=da561eec-c70e-41e6-9a3d-3113851bba77&width=1920&userId=d6864e6a-4ff3-4f2d-8167-f14ae9b07aee&cache=v2 "Logo")
+![Logo](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3b920521-7429-45d0-af00-4ca6cc0acbbd/Francesco_balassone.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220319%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220319T200005Z&X-Amz-Expires=86400&X-Amz-Signature=0a21a6caf80fab59fd8696c8d6f381eb468084d02dd0474038a26490cd66b762&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Francesco%2520balassone.png%22&x-id=GetObject "Logo")
 
 # Programmazione
 
