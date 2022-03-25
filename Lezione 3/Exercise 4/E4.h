@@ -2,7 +2,7 @@
 class Date{
 public:
 	Date(int theDay, int theMonth, int theYear)
-	: day{theDay}, year{theYear} {
+	: day{theDay}, month{1}, year{theYear} {
 
 		if(theMonth>0 && theMonth<13){
 			month=theMonth;
@@ -43,6 +43,6 @@ public:
 
 private:
 	int day;
-	int month{1};
+	int month;
 	int year;
 };
