@@ -3,71 +3,29 @@
 class Invoice{
 
 public:
-	Invoice(std::string number, std::string desc, int qtyy, int pricee)
-	: pn{number}, pd{desc}, qty{qtyy}, price{pricee}, VAT{0.2}, disc{0} {}
+	Invoice(std::string, std::string, int, int);
 
-	std::string getNumber() const {
-		return pn;
-	}
+	void setNumber (std::string);
+	std::string getNumber() const;
+	void setDesc(std::string);
+	std::string getDesc() const;
+	int getQty() const;
 
-	void setNumber (std::string theNum){
-		pn = theNum;
-	}
+	void setQty(int);
 
-	std::string getDesc() const {
-		return pd;
-	}
+	int getPrice() const;
 
-	void setDesc(std::string theDesc){
-		pd=theDesc;
-	}
+	void setPrice(int);
 
-	int getQty() const{
-		return qty;
-	}
+	double getVat() const;
 
-	void setQty(int qtyqty){
-		if(qtyqty>0){
-			qty=qtyqty;
-		}
-	}
+	void setVat(double);
 
-	int getPrice() const{
-		return price;
-	}
+	double getDisc() const;
 
-	void setPrice(int newPrice){
-		if(newPrice>0){
-			price=newPrice;
-		}	
-	}
+	void setDisc(double);
 
-	double getVat() const{
-		return VAT;
-	}
-
-	void setVat(double VATT){
-		if(VATT>0){
-			VAT=VATT;
-		}	
-	}
-
-	double getDisc() const{
-		return disc;
-	}
-
-	void setDisc(double discount){
-		if(discount>0){
-			disc=discount;
-		}	
-	}
-
-	double getInvoiceAmount(){
-		double full=price*qty;
-		full+=full*VAT;
-		full-=full*disc;
-		return full;
-	}
+	double getInvoiceAmount();
 
 private:
 	std::string pn;
