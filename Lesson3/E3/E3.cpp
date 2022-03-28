@@ -5,25 +5,20 @@ using std::cout;
 using std::endl;
 
 int main(){
-	int bin[100], num, dim{0};
-	do{
-		cout << "Dammi un numero base 10 intero: "; cin >> num;
-	} while(num==0);
+	int num, i{1}, r,bin{0};
+	
+	cout << "Dammi un numero base 10 intero: "; cin >> num;
 
 	while(num!=0){
-		bin[dim]=num%2;
-		num=num/2;
-		dim++;
+		r=num%2;
+		num/=2;
+		bin+=(i*r);
+		i*=10;
 	}
-	cout << "Il numero binario e': ";
-	for (int i=(dim-1);i>-1;i--){
-		cout << bin[i];
-	}
+	cout << "Il numero binario e': "<<bin;
+
 
 	cout << endl;
-
-
-
 
 
 	return 0;
