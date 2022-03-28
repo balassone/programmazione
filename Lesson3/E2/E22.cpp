@@ -16,7 +16,7 @@ int main(){
 		num-=a;
 		if(num%10==0){
 			cout << "Palindromo!" << endl;
-		}
+		}else cout << "Non palindromo!" << endl;
 	}
 	else cout << "Non palindromo!" << endl;
 
