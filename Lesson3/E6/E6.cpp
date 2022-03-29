@@ -18,21 +18,20 @@ int encrypt(int num){
 		i/=10;
 	}
 	i=1000;
-	while(i!=10){
+	while(i!=0){
 	
 		temp=newnum/i;
 		newnum-=(temp*i);
-		num+=temp*(i/100);
+		if(i>10){
+			num+=temp*(i/100);
+		}
+		else {
+			num+=temp*(i*100);
+		}
 		i/=10;
 
 	}
 
-	while(i!=0){
-		temp=newnum/i;
-		newnum-=(temp*i);
-		num+=temp*(i*100);
-		i/=10;
-	}	
 	return num;
 }
 
@@ -42,23 +41,20 @@ int decrypt(int num){
 	int temp;
 	int newnum{0};
 
-	while(i!=10){
-
-		temp=num/i;
-		num-=(temp*i);
-		newnum+=temp*(i/100);
-		i/=10;
-
-	}
-
 	while(i!=0){
-		
+
 		temp=num/i;
 		num-=(temp*i);
-		newnum+=temp*(i*100);
+		if(i>10){
+			newnum+=temp*(i/100);
+		}
+		else {
+			newnum+=temp*(i*100);
+		}
 		i/=10;
-	
+
 	}
+
 	i=1000;
 	temp=num;
 	num=newnum;
