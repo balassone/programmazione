@@ -85,7 +85,7 @@ int main(){
 	do{
 		cout << "Give me the number: ";
 		cin >> num;
-	} while (num<1000 || num>9999);
+	} while (num>9999);
 
 	do{
 		cout << "Encrypt (e), Decrypt (d): ";
