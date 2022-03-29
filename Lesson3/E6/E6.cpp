@@ -56,21 +56,18 @@ int decrypt(int num){
 	}
 
 	i=1000;
-	temp=num;
-	num=newnum;
-	newnum=temp;
 	while(i!=0){
 
-		temp=num/i;
-		num-=temp*i;
+		temp=newnum/i;
+		newnum-=temp*i;
 		temp+=10;
 		temp-=7;
 		if(temp>=10) temp-=10;
-		newnum+=temp*i;
+		num+=temp*i;
 		i/=10;
 
 	}
-	return newnum;
+	return num;
 }
 
 int main(){
