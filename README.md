@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/balassone/programmazione/main/logo.png "Logo")
+![Logo](https://raw.githubusercontent.com/balassone/programmazione/main/logo.png?token=GHSAT0AAAAAABSQYCARKDTSRKHMSL42WF5AYSR6XBA "Logo")
 
 # Programmazione
 
