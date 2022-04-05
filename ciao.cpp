@@ -1,3 +1,2 @@
-#include<iostream>
+lesgoo
 
-int main(){std::cout << "ciao"; return 0;}
