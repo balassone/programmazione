@@ -19,7 +19,7 @@ void Rectangle::printRectangle(){
 			else if (i>p1.getX() && i<p3.getX() && j>p1.getY() && j<p2.getY()){
 				std::cout<<fill;
 			}
-			else if(((i==p1.getX()||i==p3.getX()) && (j>=p1.getY() && j<=p2.getY())) || ((j==p1.getY()|| j==p2.getY()) && (i>=p1.getX() && i<=p3.getX()))){
+			else /*if(((i==p1.getX()||i==p3.getX()) && (j>=p1.getY() && j<=p2.getY())) || ((j==p1.getY()|| j==p2.getY()) && (i>=p1.getX() && i<=p3.getX())))*/{
 				std::cout<<bound;
 			}
 		}
