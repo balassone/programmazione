@@ -44,4 +44,28 @@ Date& Date::operator++(){
 	return *this;
 }
 
+Date Date::operator++(int){
+	Date temp{*this};
+	helpIncrement();
+	return temp;
+}
+
+Date& Date::operator+=(unsigned int additionalDays){
+	for(unsigned int i=0; i<additionalDays; ++i){
+		helpIncrement();
+	}
+	return *this;
+}
+
+bool Date::leapYear(int testYear){
+	return (testYear % 400 ==0 || (testYear % 100 != 0 && testYear % 4 ==0));
+}
+
+bool Date::endOfMonth(int testDay) const {
+	if(month == 2 && leapYear(year)){
+		return testDay==29;
+	}
+	else return testDay==days[month];
+}
+
 
