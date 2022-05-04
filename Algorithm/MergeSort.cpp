@@ -1,10 +1,11 @@
 #include <vector>
 
 using std::vector;
-void merge(vector<int>& A, int p, int r, int q){
+template <typename T>
+void merge(vector<T>& A, int p, int r, int q){
 
 	int i,j,k;
-	static vector<int> c(A.size());
+	static vector<T> c(A.size());
 	i=p;
 	k=p;
 	j=q+1;
@@ -37,7 +38,8 @@ void merge(vector<int>& A, int p, int r, int q){
 		A[i]=c[i];
 	}
 }
-void mergeSort(vector<int>& A, int p, int r){
+template <typename T>
+void mergeSort(vector<T>& A, int p, int r){
 
 	int q;
 	if(p<r){

@@ -1,9 +1,9 @@
 #include <array>
 using std::array;
 const size_t x{10};
-
-void selectionSort(array<int,x>& myArray){
-	int temp;
+template <typename T>
+void selectionSort(array<T,x>& myArray){
+	T temp;
 	size_t posmin;
 	for(size_t i{0}; i<x-1; ++i){
 		posmin=i;

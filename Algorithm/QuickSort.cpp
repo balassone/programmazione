@@ -1,8 +1,11 @@
 #include <vector>
 using std::vector;
 using std::swap;
-int partition(vector<int>& A, int p, int r){
-	int x=A[p];
+
+template <typename T>
+
+int partition(vector<T>& A, int p, int r){
+	T x=A[p];
 	int i=p-1;
 	int j=r+1;
 	while(true){
@@ -19,7 +22,8 @@ int partition(vector<int>& A, int p, int r){
 
 	}
 }
-void quickSort(vector<int>& A, int p, int r){
+template <typename T>
+void quickSort(vector<T>& A, int p, int r){
 	if(p<r){
 		int q{partition(A,p,r)};
 		quickSort(A,p,q);
