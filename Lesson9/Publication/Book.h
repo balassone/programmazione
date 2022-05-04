@@ -5,8 +5,10 @@
 class Book: public Publication {
 public:
     static int nBooks;
-    Book(std::vector<std::string>, std::string, int, std::string, std::string);
+    Book(const std::vector<std::string>&, const std::string&, const int&, const std::string&, const std::string&);
     ~Book();
+    //get & set
+    //...
     std::string toString();
 private:
     std::string ISBN;

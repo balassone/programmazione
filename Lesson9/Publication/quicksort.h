@@ -1,8 +1,9 @@
 #include <vector>
 using std::vector;
 using std::swap;
-//ha ridefinito swap non so perchè
+
 template <typename T>
+
 int partition(vector<T>& A, int p, int r){
 	T x=A[p];
 	int i=p-1;
@@ -21,7 +22,7 @@ int partition(vector<T>& A, int p, int r){
 
 	}
 }
-template<typename T>
+template <typename T>
 void quickSort(vector<T>& A, int p, int r){
 	if(p<r){
 		int q{partition(A,p,r)};
