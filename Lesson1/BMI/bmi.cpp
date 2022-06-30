@@ -1,20 +1,18 @@
 #include <iostream>
-
-using std::cout;
+#include <iomanip>
 using std::cin;
+using std::cout;
 using std::endl;
+using std::setprecision;
+using std::fixed;
 
 int main(){
-    float peso{0}, altezza{0};
-    
-    cout << "Altezza in m: " << endl;
-    cin >> altezza;
-    cout << "Peso in kg: " << endl;
-    cin >> peso;
-
-    float bmi{peso/(altezza*altezza)};
-
-    cout << "BMI: "<<bmi<<endl;
+    float h{0},w{0},bmi{0};
+    cout << "Inserire altezza e peso: ";
+    cin >> h >> w;
+    bmi=w/(h*h);
+    cout << fixed << setprecision(2);
+    cout << "BMI: " << bmi << endl;
 
     return 0;
 }
