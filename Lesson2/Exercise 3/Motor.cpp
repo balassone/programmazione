@@ -1,26 +1,45 @@
 #include <iostream>
+#include "Motor.h"
 #include <string>
-#include"Motor.h"
 
-using std::cin;
-using std::cout;
-using std::endl;
-using std::string;
+MotorVehicle::MotorVehicle(std::string m, std::string f, int y, std::string c, int e)
+: make(m), fuelType(f), yearOfManifacture(y), color(c), engineCapacity(e) {}
 
-int main(){
+MotorVehicle& MotorVehicle::setMake(std::string m){
+	make=m;
+	return *this;
+}
 
-	MotorVehicle car{"Fiat","Diesel",2003,"Grey",140};
+std::string MotorVehicle::getMake() const {return make;}
 
-	car.displayCarDetails();
+MotorVehicle& MotorVehicle::setFuel(std::string f) {
+	fuelType=f;
+	return *this;
+}
 
-	cout << "New color? ";
-	string newColor;
-	getline(cin,newColor);
-	car.setColor(newColor);
+std::string MotorVehicle::getFuel() const {return fuelType;}
 
-	car.displayCarDetails();
+MotorVehicle& MotorVehicle::setYear(int y){
+	yearOfManifacture=y;
+	return *this;
+}
 
+int MotorVehicle::getYear() const {return yearOfManifacture;}
 
+MotorVehicle& MotorVehicle::setColor(std::string c){
+	color=c;
+	return *this;
+}
 
-	return 0;
+std::string MotorVehicle::getColor() const {return color;}
+
+MotorVehicle& MotorVehicle::setCapacity(int c){
+	engineCapacity=c;
+	return *this;
+}
+
+int MotorVehicle::getCapacity() const {return engineCapacity;}
+
+void MotorVehicle::displayCarDetails(){
+	std::cout << make << " " << fuelType << " " << yearOfManifacture << " " << color << " " << engineCapacity << std::endl;
 }

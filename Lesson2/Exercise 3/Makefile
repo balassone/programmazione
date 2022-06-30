@@ -1,8 +1,10 @@
 C=g++
+FLAGS=-std=c++11 -Wall -pedantic -Wextra -g
+OBJ= driver.o Motor.o
+DEPS= Motor.h
 
-F= -std=c++11 -Wall -pedantic -Wextra
+%.o: %.cpp ${DEPS}
+	${C} -c -o $@ $< ${FLAGS}
 
-Motor: Motor.o
-	${C} -o Motor Motor.o
-Motor.o: Motor.cpp Motor.h
-	${C} -c Motor.cpp ${F}
+driver: ${OBJ}
+	${C} -o $@ $^ ${FLAGS}	
