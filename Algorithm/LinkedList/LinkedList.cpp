@@ -14,20 +14,22 @@ template <typename NODETYPE>
 LinkedList<NODETYPE>::~LinkedList(){while(!empty()) removeFront();}
 
 template <typename NODETYPE>
-void LinkedList<NODETYPE>::addFront(const NODETYPE& e){
+LinkedList<NODETYPE>& LinkedList<NODETYPE>::addFront(const NODETYPE& e){
 	Node <NODETYPE>* v = new Node<NODETYPE>;
 	v->elem=e;
 	v->next=head;
 	head=v;
+	return *this;
 }
 
 template <typename NODETYPE>
-void LinkedList<NODETYPE>::removeFront(){
+LinkedList<NODETYPE>& LinkedList<NODETYPE>::removeFront(){
 	if(head!=nullptr){
 		Node<NODETYPE>* old = head;
 		head = old->next;
 		delete old;
 	}
+	return *this;
 }
 
 template <typename NODETYPE>
@@ -71,7 +73,7 @@ int LinkedList<NODETYPE>::search(const NODETYPE& e) const{
 	}
 }
 template <typename NODETYPE>
-void LinkedList<NODETYPE>::deleteNode(const NODETYPE& e){
+LinkedList<NODETYPE>& LinkedList<NODETYPE>::deleteNode(const NODETYPE& e){
 	
 	if(!empty()){
 		
@@ -97,6 +99,7 @@ void LinkedList<NODETYPE>::deleteNode(const NODETYPE& e){
 	else{
 		std::cout << "Lista vuota\n";
 	}
+	return *this;
 }	
 template <typename NODETYPE>
 std::string LinkedList<NODETYPE>::toString() const{
