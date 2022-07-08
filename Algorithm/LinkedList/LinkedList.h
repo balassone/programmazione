@@ -10,14 +10,14 @@ class LinkedList {
 		LinkedList<NODETYPE>& operator=(const LinkedList<NODETYPE>&);
 		bool empty() const;
 		const NODETYPE& front() const;
-		void addFront(const NODETYPE& e);
-		void removeFront();
+		LinkedList<NODETYPE>& addFront(const NODETYPE& e);
+		LinkedList<NODETYPE>& removeFront();
 		int size() const;
 		const NODETYPE& operator[](const int&);
 		int search(const NODETYPE&) const;
-		void deleteNode(const NODETYPE&);
+		LinkedList<NODETYPE>& deleteNode(const NODETYPE&);
 		std::string toString() const;
-		LinkedList& reverse();
+		LinkedList<NODETYPE>& reverse();
 	private:
 		Node<NODETYPE>* head;
 };
