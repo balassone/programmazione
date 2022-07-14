@@ -1,8 +1,6 @@
 #include <vector>
-
-using std::vector;
 template <typename T>
-int binSearch(const vector<T>& myVec, const T& elem){
+int binSearch(const std::vector<T>& myVec, const T& elem){
 	int inf=0;
 	int sup=myVec.size()-1;
 	while(inf<=sup){

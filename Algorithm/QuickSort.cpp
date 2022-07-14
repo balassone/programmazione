@@ -1,10 +1,13 @@
 #include <vector>
-using std::vector;
-using std::swap;
-
 template <typename T>
 
-int partition(vector<T>& A, int p, int r){
+void swap(std::vector<T>& A, const int& i, const int& j){
+	T temp{A[i]};
+	A[i]=A[j];
+	A[j]=temp;
+}
+template <typename T>
+int partition(std::vector<T>& A, int p, int r){
 	T x=A[p];
 	int i=p-1;
 	int j=r+1;
@@ -16,14 +19,14 @@ int partition(vector<T>& A, int p, int r){
 			i+=1;
 		while(A[i]<x);
 		if(i<j)
-			swap(A[i],A[j]);
+			swap(A,i,j);
 		else
 			return j;
 
 	}
 }
 template <typename T>
-void quickSort(vector<T>& A, int p, int r){
+void quickSort(std::vector<T>& A, int p, int r){
 	if(p<r){
 		int q{partition(A,p,r)};
 		quickSort(A,p,q);

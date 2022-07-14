@@ -1,10 +1,7 @@
 #include <array>
-
-using std::array;
-
 const size_t x{10};
 template <typename T>
-void insertionSort(array<T,x>& myArray){
+void insertionSort(std::array<T,x>& myArray){
 
 	for(size_t j{1}; j<x; ++j){
 		T key=myArray[j];

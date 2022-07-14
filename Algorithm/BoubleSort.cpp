@@ -1,8 +1,7 @@
 #include <array>
-using std::array;
 const size_t x{10};
 template <typename T>
-void boubleSort(array<T,x>& myArray){
+void boubleSort(std::array<T,x>& myArray){
 	T temp;
 	for(size_t i{0}; i<x-1; ++i){
 		for(size_t j{i+1}; j<x; ++j){

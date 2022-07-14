@@ -1,11 +1,9 @@
 #include <vector>
-
-using std::vector;
 template <typename T>
-void merge(vector<T>& A, int p, int r, int q){
+void merge(std::vector<T>& A, int p, int r, int q){
 
 	int i,j,k;
-	static vector<T> c(A.size());
+	static std::vector<T> c(A.size());
 	i=p;
 	k=p;
 	j=q+1;
@@ -39,7 +37,7 @@ void merge(vector<T>& A, int p, int r, int q){
 	}
 }
 template <typename T>
-void mergeSort(vector<T>& A, int p, int r){
+void mergeSort(std::vector<T>& A, int p, int r){
 
 	int q;
 	if(p<r){

@@ -1,8 +1,7 @@
-#include <iostream>
 #include <vector>
-using std::vector;
+
 template <typename T>
-int binSearch(const vector<T>& myVec,T elem, int inf, int sup){
+int binSearch(const std::vector<T>& myVec,T elem, int inf, int sup){
 	int p,q=-1;
 	if(inf<=sup){
 		p=(inf+sup)/2;
