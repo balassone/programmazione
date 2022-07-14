@@ -1,3 +1,5 @@
+#ifndef BINSEARCH_H
+#define BINSEARCH_H
 #include <vector>
 template <typename T>
 int binSearch(const std::vector<T>& myVec, const T& elem){
@@ -14,3 +16,4 @@ int binSearch(const std::vector<T>& myVec, const T& elem){
 	}
 	return -1;
 }
+#endif

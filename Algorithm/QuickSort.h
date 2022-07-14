@@ -1,6 +1,7 @@
+#ifndef QUICKSORT_H
+#define QUICKSORT_H
 #include <vector>
 template <typename T>
-
 void swap(std::vector<T>& A, const int& i, const int& j){
 	T temp{A[i]};
 	A[i]=A[j];
@@ -33,3 +34,4 @@ void quickSort(std::vector<T>& A, int p, int r){
 		quickSort(A,q+1,r);
 	}
 }
+#endif

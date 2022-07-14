@@ -1,5 +1,6 @@
+#ifndef RECBINSEARCH_H
+#define RECBINSEARCH_H
 #include <vector>
-
 template <typename T>
 int binSearch(const std::vector<T>& myVec,T elem, int inf, int sup){
 	int p,q=-1;
@@ -17,3 +18,4 @@ int binSearch(const std::vector<T>& myVec,T elem, int inf, int sup){
 	}
 	return q;
 }
+#endif

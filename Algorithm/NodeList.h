@@ -1,3 +1,5 @@
+#ifndef NODELIST_H
+#define NODELIST_H
 template <typename T>
 class NodeList{
 private:
@@ -139,3 +141,4 @@ void NodeList<T>::erase(const NodeList::Iterator& p){
     delete[] v;
     n--;
 }
+#endif

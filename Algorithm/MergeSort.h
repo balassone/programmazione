@@ -1,3 +1,5 @@
+#ifndef MERGESORT_H
+#define MERGESORT_H
 #include <vector>
 template <typename T>
 void merge(std::vector<T>& A, int p, int r, int q){
@@ -48,3 +50,4 @@ void mergeSort(std::vector<T>& A, int p, int r){
 	}
 
 }
+#endif
