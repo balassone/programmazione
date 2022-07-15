@@ -269,7 +269,7 @@ int LinkedList<NODETYPE>::search(const NODETYPE& a) const{
 
 template <typename NODETYPE>
 LinkedList<NODETYPE>& LinkedList<NODETYPE>::deleteElem(const NODETYPE& e){
-    if(!empty()){
+    if(!isEmpty()){
         if(head->elem==e){
             removeFront();
         } else {
