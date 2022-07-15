@@ -23,6 +23,7 @@ public:
     LinkedList<NODETYPE>& remove(const int&);
     LinkedList<NODETYPE>& addOrder(const NODETYPE&);
     int search(const NODETYPE&) const;
+    LinkedList<NODETYPE>& addPosition(const int& p, const T& e);
 private:
     Node<NODETYPE>* head;
 };

@@ -287,3 +287,20 @@ LinkedList<NODETYPE>& LinkedList<NODETYPE>::deleteElem(const NODETYPE& e){
     }
     return *this;
 }
+template <typename NODETYPE>
+LinkedList<NODETYPE>& addPosition(const int& p, const NODETYPE& e){
+    if(p<0 || p>getLength()){
+        throw std::runtime_error("Index out of bounds");
+    }
+    else{
+        Node<NODETYPE>* curr=head;
+        for(int j{0};j<p-1;++j){
+            curr=curr->next;
+        }
+        Node<NODETYPE>* temp=curr->next;
+        curr->next=new Node<NODETYPE>;
+        curr->next->elem=e;
+        curr->next->next=temp;
+    }
+    return *this;
+}
