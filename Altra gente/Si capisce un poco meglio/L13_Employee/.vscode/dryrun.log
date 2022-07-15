@@ -1,0 +1,8 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L13_Employee'
+g++ -c testEmployee.cpp -std=c++11 -Wall -pedantic
+g++ -c Date.cpp -std=c++11 -Wall -pedantic
+g++ -c Employee.cpp -std=c++11 -Wall -pedantic
+g++ -o testEmployee testEmployee.o Date.o Employee.o
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L13_Employee'
+ 

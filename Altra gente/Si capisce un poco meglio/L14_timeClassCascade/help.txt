@@ -1,0 +1,4 @@
+Questo progetto vuole mettere in evidenza l'utilità del puntatore "this" nel caso di oggetti che
+fanno parte di una certa espressione e le cui funzioni membro (in genere quelle di tipo set) 
+vengono invocate in cascata.
+Il main è "Cascade.cpp"

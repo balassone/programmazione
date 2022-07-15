@@ -1,0 +1,8 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/Magazzino'
+g++ -c -o Articolo.o Articolo.cpp -std=c++11 -Wall -pedantic
+ 
+g++ -c -o Magazzino.o Magazzino.cpp -std=c++11 -Wall -pedantic
+g++ -o Magazzino Articolo.o Magazzino.o -std=c++11 -Wall -pedantic	
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/Magazzino'
+ 

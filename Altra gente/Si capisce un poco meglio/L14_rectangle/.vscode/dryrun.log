@@ -1,0 +1,8 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L14_rectangle'
+g++ -c -o Point.o Point.cpp -std=c++11
+g++ -c -o Rectangle.o Rectangle.cpp -std=c++11
+g++ -c -o driver.o driver.cpp -std=c++11
+g++ -o driver Point.o Rectangle.o driver.o -std=c++11
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L14_rectangle'
+ 

@@ -1,0 +1,6 @@
+make.exe all --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L5_Invoice'
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L5_Invoice'
+ 
+make.exe: *** No rule to make target 'all'.
+ 

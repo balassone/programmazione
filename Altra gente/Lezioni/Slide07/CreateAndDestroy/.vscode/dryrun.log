@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/cameretta/OneDrive - Università di Napoli Federico II/Università/2.2/Programmazione1/Programmi/Slide07/CreateAndDestroy'
+c++    -c -o testDestructors.o testDestructors.cpp
+g++ -c CreateAndDestroy.cpp -std=c++11 -Wall 	-pedantic
+g++ -o testDestructors testDestructors.o CreateAndDestroy.o
+make: Leaving directory `/Users/cameretta/OneDrive - Università di Napoli Federico II/Università/2.2/Programmazione1/Programmi/Slide07/CreateAndDestroy'
+ 

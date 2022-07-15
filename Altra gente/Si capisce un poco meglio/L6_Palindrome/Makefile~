@@ -1,0 +1,4 @@
+Palindrome: Palindrome.o
+	g++ -o Palindrome Palindrome.o
+Palindrome.o: Palindrome.cpp
+	g++ -c Palindrome.cpp -std=c++11 -pedantic -Wall

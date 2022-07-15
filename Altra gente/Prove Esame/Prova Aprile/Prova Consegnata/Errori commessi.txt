@@ -1,0 +1,17 @@
+x Node.h nel makefile come dipendenze
+x Chiamare AlbergoDriver l'output finale del makefile
+x Funzione ADD usa nodi non di tipo <NODETYPE>
+x ifguard in linkedlist.h
+x Distruttore in Date non vale manco il cazzo
+x Funzione insertBooking con signature sbagliata(Nella signature manca il vettore in ingresso)
+x Operatore > in albergo dichiarato ma non implementato
+x BigThree in Albergo non implementato
+x Marcare la funzione size() come costante
+x Costruttore di default in Data per la lista di prenotazioni
+x Mancanza credenziali albergo in toString
+x Date dei clienti con anni non completi(22 al posto di 2022)
+x Funzione add non funziona correttamente
+x toString sballato e vectorPrint non funge
+x SegmentationFault su impostaLista: operatore = linkedlist ? 
+x formattazione dati toString non corretta
+

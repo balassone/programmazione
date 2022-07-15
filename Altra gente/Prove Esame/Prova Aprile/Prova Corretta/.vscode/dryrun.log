@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Volumes/Ciao/Prova Aprile'
+g++ -c -o AlbergoDriver.o AlbergoDriver.cpp -std=c++11 -Wall -pedantic
+g++ -o Driver Date.o Cliente.o Albergo.o AlbergoDriver.o -std=c++11 -Wall -pedantic
+make: Leaving directory `/Volumes/Ciao/Prova Aprile'
+ 

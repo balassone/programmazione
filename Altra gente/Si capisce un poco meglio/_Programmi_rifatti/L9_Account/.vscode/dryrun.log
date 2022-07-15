@@ -1,0 +1,10 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/L9_Account'
+g++ -c -o Account.o Account.cpp -std=c++11 -Wall -pedantic
+ 
+g++ -c -o SavingsAccount.o SavingsAccount.cpp -std=c++11 -Wall -pedantic
+g++ -c -o CheckingAccount.o CheckingAccount.cpp -std=c++11 -Wall -pedantic
+g++ -c -o testAccount.o testAccount.cpp -std=c++11 -Wall -pedantic
+g++ -o testAccount Account.o SavingsAccount.o CheckingAccount.o testAccount.o -std=c++11 -Wall -pedantic	
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/L9_Account'
+ 

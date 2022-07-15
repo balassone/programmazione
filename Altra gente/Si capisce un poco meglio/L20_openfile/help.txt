@@ -1,0 +1,3 @@
+Il file openfile1 sovrascrive il file clients.txt quando si scrive, 
+il file openfile2 accoda il testo inserito al file clients.txt,
+il file readfile legge clients.txt 

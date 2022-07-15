@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/L11_DoublyLinkedList'
+g++ -c -o testDLinkedList.o testDLinkedList.cpp -std=c++11 -Wall -pedantic
+g++ -o testDLinkedList testDLinkedList.o -std=c++11 -Wall -pedantic
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/L11_DoublyLinkedList'
+ 

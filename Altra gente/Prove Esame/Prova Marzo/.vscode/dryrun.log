@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/cameretta/Library/CloudStorage/OneDrive-UniversitàdiNapoliFedericoII/Università/2.2/Programmazione1/EserciziSlideP1/PoliambulatorioESAME0325'
+make: `PoliambulatorioDriver' is up to date.
+make: Leaving directory `/Users/cameretta/Library/CloudStorage/OneDrive-UniversitàdiNapoliFedericoII/Università/2.2/Programmazione1/EserciziSlideP1/PoliambulatorioESAME0325'
+ 

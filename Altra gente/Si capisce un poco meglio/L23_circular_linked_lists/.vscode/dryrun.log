@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L23_circular_linked_lists'
+g++ -c -o testCLinkedList.o testCLinkedList.cpp -std=c++11
+g++ -o testCLinkedList testCLinkedList.o -std=c++11
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L23_circular_linked_lists'
+ 

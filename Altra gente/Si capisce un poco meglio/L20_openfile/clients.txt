@@ -1,0 +1,6 @@
+10 Mario 10.1
+11 Michele 0
+12 Franco -12.3
+14 Giovanni 12
+15 Enzo -1
+16 Carlo -1 

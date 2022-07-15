@@ -1,0 +1,26 @@
+//Program comparing 2 integers
+
+#include <iostream>
+
+int main () {
+  int num1{0};
+  int num2{0};
+
+  std::cout<<"Inserire il primo numero: "<<std::endl;
+  std::cin>>num1;
+  std::cout<<"Inserire il secondo numero: "<<std::endl;
+  std::cin>>num2;
+
+  if(num1>num2){
+    std::cout<<num1<<" e' maggiore di "<<num2<<std::endl;
+  }
+  else{
+    if (num2>num1){
+      std::cout<<num1<<" e' minore di "<<num2<<std::endl;
+    }
+    else {
+      std::cout<<num1<<" e' uguale a  "<<num2<<std::endl;
+    }
+  }
+}
+

@@ -1,0 +1,4 @@
+Account   Last Name       First Name    Balance
+3         Torpedine       Roberto        400.00
+6         Lundini         Valerio         30.00
+10        Signora         Anna          -200.00

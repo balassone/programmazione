@@ -1,0 +1,5 @@
+make.exe --dry-run --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L15_testDate_overloading'
+g++ -o testDate testDate.o Date.o -std=c++11 -Wall -pedantic
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L15_testDate_overloading'
+ 

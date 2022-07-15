@@ -1,0 +1,17 @@
+Lista argomenti trattati nelle prove:
+PROVA GIUGNO- FANTALAND(INCOMPLETA): lista
+
+PROVA LUGLIO- BLUESKY(INCOMPLETO): composizione, liste, quicksort e overload operatore, B3
+
+PROVA OTTOBRE- ISTOGRAMMA:Composizione, Lista Doppiamente Linkata, B3, vettore ordinato, uso di vettore di puntatori, scorrimento lista per ritornare somma di parametri, overloading operatore <<, >, <, ==, =, B3
+
+PROVA NOVEMBRE - AZIENDA SVILUPPO : Composizione, Lista, Aggiunta in una lista ordinata, scorrimento lista per ritornare somma di parametri, B3
+
+PROVA GENNAIO: AGENZIA SPEDIZIONI: Polimorfismo, Lista, Aggiunta in una lista ordinata, uso di template, lista polimorfica, override funzioni, B3
+
+PROVA FEBBRAIO: INVENTARIO PIANI APPOGGIO: Polimorfismo, Lista, Aggiunta in una lista ordinata, lista polimorfica, funzioni puramente virtuali, scorrimento lista per ritornare somma di parametri, overloading operatore >, <, ==, =, B3
+
+PROVA MARZO: POLIAMBULATORIO: Composizione, Coda, Lista Circolare, overloading operatore <<, >, <, ==, =, confronti dereferenziati, B3, algoritmo per ordinare posizione dei dottori a seconda dell'aggiunta o rimozione di un paziente
+
+
+	

@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/cameretta/Downloads/Prova Novembre'
+g++ -c -o Date.o Date.cpp -std=c++11
+g++ -c -o Programmatore.o Programmatore.cpp -std=c++11
+g++ -c -o LinkedList.o LinkedList.cpp -std=c++11
+g++ -c -o Driver.o Driver.cpp -std=c++11
+g++ -o Driver Date.o Programmatore.o LinkedList.o Driver.o -std=c++11
+make: Leaving directory `/Users/cameretta/Downloads/Prova Novembre'
+ 

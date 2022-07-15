@@ -1,0 +1,2 @@
+Progetto per mettere in evidenza la compisizione di oggetti.
+La classe Employee fa uso della classe Date.

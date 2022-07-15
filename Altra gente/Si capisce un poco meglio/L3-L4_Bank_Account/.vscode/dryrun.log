@@ -1,0 +1,5 @@
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L3-L4_Bank_Account'
+g++ -Wall -pedantic -std=c++11 -c AccountTest.cpp
+g++ -o AccountTest AccountTest.o
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/L3-L4_Bank_Account'
+ 

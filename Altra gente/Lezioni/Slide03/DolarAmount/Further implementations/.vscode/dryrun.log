@@ -1,0 +1,5 @@
+make: Entering directory `/Users/cameretta/Library/CloudStorage/OneDrive-UniversitàdiNapoliFedericoII/Università/2.2/Programmazione1/EserciziSlideP1/Slide03/DolarAmount/Further implementations'
+g++  -c AccountTest.cpp 
+g++  -o AccountTest AccountTest.o
+make: Leaving directory `/Users/cameretta/Library/CloudStorage/OneDrive-UniversitàdiNapoliFedericoII/Università/2.2/Programmazione1/EserciziSlideP1/Slide03/DolarAmount/Further implementations'
+ 

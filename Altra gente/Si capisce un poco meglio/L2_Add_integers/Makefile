@@ -1,0 +1,4 @@
+add: adding_integers.o
+	g++ -o add adding_integers.o
+adding_integers.o: adding_integers.cpp
+	g++ -c adding_integers.cpp -std=c++11 -pedantic -Wall

@@ -1,0 +1,8 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/simod/OneDrive - Universit� di Napoli Federico II/Universit�/2.2/Programmazione1/EserciziSlideP1/Slide08/Matrix'
+g++ -c -o Matrix.o Matrix.cpp -std=c++11 -Wall -pedantic
+ 
+g++ -c -o MatrixDriver.o MatrixDriver.cpp -std=c++11 -Wall -pedantic
+g++  -o MatrixDriver Matrix.o MatrixDriver.o -std=c++11 -Wall -pedantic
+make.exe: Leaving directory 'c:/Users/simod/OneDrive - Universit� di Napoli Federico II/Universit�/2.2/Programmazione1/EserciziSlideP1/Slide08/Matrix'
+ 

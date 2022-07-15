@@ -1,0 +1,10 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/Prova 18-06'
+g++    -c -o Book.o Book.cpp
+ 
+g++    -c -o test.o test.cpp
+g++    -c -o Date.o Date.cpp
+g++    -c -o Borrow.o Borrow.cpp
+g++ -o test Book.o test.o Date.o Borrow.o -std=c++11 -Wall -pedantic
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/Prova 18-06'
+ 

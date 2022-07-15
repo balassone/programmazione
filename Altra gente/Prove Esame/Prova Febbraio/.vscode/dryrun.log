@@ -1,0 +1,11 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/cameretta/Library/CloudStorage/OneDrive-UniversitàdiNapoliFedericoII/Università/2.2/Programmazione1/EserciziSlideP1/Prova Febbraio'
+g++ -c -o Piano.o Piano.cpp -std=c++11 -Wall -pedantic
+g++ -c -o Cerchio.o Cerchio.cpp -std=c++11 -Wall -pedantic
+g++ -c -o Rettangolo.o Rettangolo.cpp -std=c++11 -Wall -pedantic
+g++ -c -o Triangolo.o Triangolo.cpp -std=c++11 -Wall -pedantic
+g++ -c -o ListaP.o ListaP.cpp -std=c++11 -Wall -pedantic
+g++ -c -o Driver.o Driver.cpp -std=c++11 -Wall -pedantic
+g++ -o Driver Piano.o Cerchio.o Rettangolo.o Triangolo.o ListaP.o Driver.o -std=c++11 -Wall -pedantic
+make: Leaving directory `/Users/cameretta/Library/CloudStorage/OneDrive-UniversitàdiNapoliFedericoII/Università/2.2/Programmazione1/EserciziSlideP1/Prova Febbraio'
+ 

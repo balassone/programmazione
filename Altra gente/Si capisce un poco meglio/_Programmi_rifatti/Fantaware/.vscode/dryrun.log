@@ -1,0 +1,11 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/Fantaware'
+g++ -c main.cpp -std=c++11 -Wall -pedantic
+ 
+g++ -c Date.cpp -std=c++11 -Wall -pedantic
+g++ -c Progetto.cpp -std=c++11 -Wall -pedantic
+ 
+g++ -c Programmatore.cpp -std=c++11 -Wall -pedantic
+g++ -o main main.o Date.o Progetto.o Programmatore.o -std=c++11 -Wall -pedantic 
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/Fantaware'
+ 

@@ -1,0 +1,2 @@
+Il programma fileposition legge un file esistente e ne copia il contenuto in un file che crea (hello2.txt).
+Il programma fileposition2 fa lo stesso ma utilizzando gli argomenti del main da terminale, ma copia in hello_new.txt.

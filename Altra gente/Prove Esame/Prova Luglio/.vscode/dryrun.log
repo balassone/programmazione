@@ -1,0 +1,10 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/cameretta/Downloads/Blue Sky'
+c++    -c -o RilevDriver.o RilevDriver.cpp
+make: Leaving directory `/Users/cameretta/Downloads/Blue Sky'
+ 
+make: *** No rule to make target `Rilevamento.o,', needed by `RilevDriver'.
+make: *** No rule to make target `RilevList.o,', needed by `RilevDriver'.
+make: *** No rule to make target `City.o,', needed by `RilevDriver'.
+make: *** No rule to make target `Date.o,', needed by `RilevDriver'.
+

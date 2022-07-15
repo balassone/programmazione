@@ -1,0 +1,5 @@
+make.exe --dry-run --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/Container'
+g++ -o main main.o Container.o Box.o -std=c++11 -Wall -pedantic
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/Container'
+ 

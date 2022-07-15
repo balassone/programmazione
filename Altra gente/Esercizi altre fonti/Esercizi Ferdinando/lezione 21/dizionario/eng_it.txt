@@ -1,0 +1,13 @@
+aunt	zia
+car	auto
+chair	sedia
+college	scuola
+come	vieni
+father	padre
+flower	fiore
+food	cibo
+fork	forchetta
+fruit	frutta
+table	tavolo
+house	casa
+hello	ciao

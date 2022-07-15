@@ -1,0 +1,9 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/cameretta/Library/CloudStorage/OneDrive-UniversitàdiNapoliFedericoII/Università/2.2/Programmazione1/EserciziSlideP1/Prove Esame/ProvaOttobre'
+g++ -c -o Insegnamento.o Insegnamento.cpp -std=c++11 -Wall -pedantic
+ 
+g++ -c -o Studente.o Studente.cpp -std=c++11 -Wall -pedantic
+g++ -c -o IstogrammaDriver.o IstogrammaDriver.cpp -std=c++11 -Wall -pedantic
+g++ -o IstogrammaDriver Insegnamento.o Studente.o IstogrammaDriver.o -std=c++11 -Wall -pedantic
+make: Leaving directory `/Users/cameretta/Library/CloudStorage/OneDrive-UniversitàdiNapoliFedericoII/Università/2.2/Programmazione1/EserciziSlideP1/Prove Esame/ProvaOttobre'
+ 

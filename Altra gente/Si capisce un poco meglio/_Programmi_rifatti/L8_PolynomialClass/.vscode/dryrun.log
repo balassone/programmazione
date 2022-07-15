@@ -1,0 +1,7 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/L8_PolynomialClass'
+g++ -c -o Polynomial.o Polynomial.cpp -std=c++11 -Wall -pedantic
+g++ -c -o testPolynomial.o testPolynomial.cpp -std=c++11 -Wall -pedantic
+g++ -o testPolynomial Polynomial.o testPolynomial.o -std=c++11 -Wall -pedantic	
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/L8_PolynomialClass'
+ 

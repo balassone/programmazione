@@ -1,0 +1,14 @@
+L'esercizio richiede di creare un rettangolo individuando i 4 estremi.
+Sfruttiamo la composizione di oggetti.
+Il make file è fatto in un modo nuovo, sfruttando i meccanismi di riscrittura automatica tramite alcune
+variabili definite nel make. In alternativa si poteva fare come al solito:
+
+//Makefile
+driver: driver.o Rectangle.o Point.o
+	g++ -o driver driver.o Rectangle.o Point.o
+driver.o: driver.cpp Rectangle.h Point.h
+	g++ -c driver.cpp -std=c++11 -Wall -pedantic
+Rectangle.o: Rectangle.cpp Rectangle.h Point.h
+	g++ -c Rectangle.cpp -std=c++11 -Wall -pedantic
+Point.o: Point.cpp Point.h
+	g++ -c Point.cpp -std=c++11 -Wall -pedantic

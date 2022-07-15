@@ -1,0 +1,3 @@
+Codice  Nome                Quantita  Prezzo($)
+1       camicia             2     59.9900
+99      pallone             3     7.90000

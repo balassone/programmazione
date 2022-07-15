@@ -1,0 +1,2 @@
+Progetto per mostrare l'uso del costruttore di copia per la copia di oggetti, ovvero per l'assegnazione di un oggetto
+ad un altro oggetto.

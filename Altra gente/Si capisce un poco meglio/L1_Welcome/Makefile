@@ -1,0 +1,4 @@
+Welcome: Welcome.o
+	g++ -o Welcome Welcome.o
+Welcome.o: Welcome.cpp
+	g++ -c Welcome.cpp -std=c++11 -pedantic -Wall

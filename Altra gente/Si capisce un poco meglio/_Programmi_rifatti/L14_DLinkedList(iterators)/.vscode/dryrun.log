@@ -1,0 +1,6 @@
+make.exe --dry-run --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/L14_DLinkedList(iterators)'
+g++ -c -o testDList.o testDList.cpp -std=c++11 -Wall -pedantic
+g++ -o testDList testDList.o -std=c++11 -Wall -pedantic
+make.exe: Leaving directory 'c:/Users/ALESSANDROCOCCHIA/Desktop/Programmi_miei/_Programmi_rifatti/L14_DLinkedList(iterators)'
+ 

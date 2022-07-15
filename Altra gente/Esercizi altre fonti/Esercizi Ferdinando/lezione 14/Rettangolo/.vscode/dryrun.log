@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/vincenzofalcini/Desktop/Uni/Programmazione1/Esercizi Ferdinando/lezione 14/Rettangolo'
+g++ -o Driver Driver.o Rettangolo.o Punto.o
+make: Leaving directory `/Users/vincenzofalcini/Desktop/Uni/Programmazione1/Esercizi Ferdinando/lezione 14/Rettangolo'
+ 

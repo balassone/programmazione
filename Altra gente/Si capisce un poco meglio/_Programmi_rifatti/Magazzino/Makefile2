@@ -1,0 +1,12 @@
+CC=g++
+CFLAGS=-std=c++11 -Wall -pedantic
+DEPS=Articolo.h
+OBJ1=Articolo.o createNewFile.o
+
+%.o: %.cpp $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+createNewFile: $(OBJ1)
+	$(CC) -o $@ $^ $(CFLAGS)	
+
+

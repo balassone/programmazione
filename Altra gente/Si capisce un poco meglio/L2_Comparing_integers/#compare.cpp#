@@ -1,0 +1,12 @@
+//Program comparing integers
+
+#include <iostream>
+
+int main () {
+  int num1{0};
+  int num2{0};
+
+  std::cout<<"Inserire primo numero: "<<std::endl;
+  std::cin>>num1;
+  std::cout<<"Inserire secondo numero: "<<std::endl
+   }
