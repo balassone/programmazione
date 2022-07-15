@@ -15,6 +15,7 @@ public:
     LinkedList<NODETYPE>& reverse();
     std::string toString() const;
     NODETYPE& operator[](int);
+    LinkedList<NODETYPE>& deleteElem(const NODETYPE& e);
     int getLength() const;
     LinkedList<NODETYPE>& clear();
     LinkedList<NODETYPE>& addBack(const NODETYPE&);

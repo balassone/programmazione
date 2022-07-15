@@ -266,3 +266,24 @@ int LinkedList<NODETYPE>::search(const NODETYPE& a) const{
         return -1;
     }
 }
+
+template <typename NODETYPE>
+LinkedList<NODETYPE>& LinkedList<NODETYPE>::deleteElem(const NODETYPE& e){
+    if(!empty()){
+        if(head->elem==e){
+            removeFront();
+        } else {
+            Node<NODETYPE>* curr{head};
+            Node<NODETYPE>* succ{head->next};
+            while(succ!=nullptr && succ->elem!=e){
+                curr=succ;
+                succ=succ->next;
+            }
+            if(succ!=nullptr){
+                curr->next=succ->next;
+                delete[] succ;
+            }
+        }
+    }
+    return *this;
+}
