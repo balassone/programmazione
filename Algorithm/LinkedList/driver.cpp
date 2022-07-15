@@ -12,7 +12,7 @@ int main(){
     ciao.addOrder(6);
     //ciao[3]=7;
     ciao.addOrder(8);
-    ciao.deleteElem(8);
-    cout << ciao.toString() << endl;
+    ciao.deleteElem(4);
+    cout << ciao[2] << endl;
     return 0;
 }
