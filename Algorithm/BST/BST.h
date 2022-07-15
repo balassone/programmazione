@@ -14,7 +14,7 @@ class BSTNode{
         BSTNode<Key>* right;
         BSTNode<Key>* parent;
 };
-
+template <typename Key>
 class BST{
     protected:
         BSTNode<int>* root;
