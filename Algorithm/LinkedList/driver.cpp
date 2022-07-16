@@ -13,6 +13,7 @@ int main(){
     //ciao[3]=7;
     ciao.addOrder(8);
     ciao.deleteElem(4);
-    cout << ciao[2] << endl;
+    ciao[3]=8;
+    cout << ciao[3] << endl;
     return 0;
 }
