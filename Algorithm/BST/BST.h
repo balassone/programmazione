@@ -27,11 +27,17 @@ class BST{
         //traverse
         void inorderTreeWalk(BSTNode<Key>* x);
         void inorderTreeWalk() {inorderTreeWalk(root);}
+        void preorderTreeWalk(BSTNode<Key>* x);
+        void preorderTreeWalk() {preorderTreeWalk(root);}
+        void postorderTreeWalk(BSTNode<Key>* x);
+        void postorderTreeWalk() {postorderTreeWalk(root);}
         
         //Accessors
         BSTNode<Key>* getRoot() const {return root;}
         BSTNode<Key>* search(Key key);
         BSTNode<Key>* search(BSTNode<Key>* x, Key key);
+        BSTNode<Key>* recSearch(Key key);
+        BSTNode<Key>* recSearch(BSTNode<Key>* x, Key key);
         BSTNode<Key>* minimum() {return minimum(root);}
         BSTNode<Key>* minimum(BSTNode<Key>* subroot);
         BSTNode<Key>* maximum() {return maximum(root);}
@@ -51,7 +57,22 @@ void BST<Key>::inorderTreeWalk(BSTNode<Key>* x){
         inorderTreeWalk(x->right);
     }
 }
-
+template <typename Key>
+void BST<Key>::preorderTreeWalk(BSTNode<Key>* x){
+    if(x!=nullptr){
+        std::cout<<x->key<<"\n";
+        preorderTreeWalk(x->left);
+        preorderTreeWalk(x->right);
+    }
+}
+template <typename Key>
+void BST<Key>::postorderTreeWalk(BSTNode<Key>* x){
+    if(x!=nullptr){
+        postorderTreeWalk(x->left);
+        postorderTreeWalk(x->right);
+        std::cout<<x->key<<"\n";
+    }
+}
 template <typename Key>
 BSTNode<Key>* BST<Key>::search(BSTNode<Key> *x, Key key){
     while(x){
@@ -64,6 +85,27 @@ BSTNode<Key>* BST<Key>::search(BSTNode<Key> *x, Key key){
     }
     return x;
 }
+
+template <typename Key>
+BSTNode<Key>* BST<Key>::recSearch(BSTNode<Key>* x, Key key){
+    if(x==nullptr){
+        return nullptr;
+    }
+    if(x->key==key){
+        return x;
+    }
+    if(x->key<key){
+        return recSearch(x->right, key);
+    } else{
+        return recSearch(x->left,key);
+    }
+}
+
+template <typename Key>
+BSTNode<Key>* BST<Key>::recSearch(Key key){
+    return recSearch(root,key);
+}
+
 template <typename Key>
 BSTNode<Key>* BST<Key>::search(Key key){
     return search(root, key);
