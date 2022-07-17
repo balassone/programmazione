@@ -30,13 +30,13 @@ La funzione summarizeWharehouse()che calcola la somma dei prezzi di tutti i pian
 #include "LinkedList.h"
 
 #include <iostream>
-//#include "Fabbrica.h"
+
 #include "Piano.h"
 
 using std::cin;
 using std::cout;
 using std::endl;
-void insertTable(LinkedList<Piano*>& l, Piano* const p);
+const LinkedList<Piano*>& insertTable(LinkedList<Piano*>& l, Piano* const p);
 int main(){
     //Fabbrica f;
     Rotondo a(0,"Pino", "Divani",50,1);
@@ -44,23 +44,30 @@ int main(){
     Rettangolare b(1,"Quercia","Poltrone",200,3,5);
     Triangolare c(2,"Abete","Ske",15,2,10);
     LinkedList<Piano*> al;
-    insertTable(al,&a);
-    insertTable(al,&b);
-    //insertTable(al,&c);
-    //insertTable(al,&d);
-    cout << al[0]->toString();
+    al=insertTable(al,&a);
+    al=insertTable(al,&b);
+    al=insertTable(al,&c);
+    al=insertTable(al,&d);
+    cout << al[2]->toString();
     return 0;
 }
 
-void insertTable(LinkedList<Piano*>& l, Piano* const p){
+const LinkedList<Piano*>& insertTable(LinkedList<Piano*>& l, Piano* const p){
     if(l.isEmpty()){
         l.addFront(p);
+    } if(l.getLength()==1){
+        if(*(l[0])<*p){
+            l.addBack(p);
+        } else{
+            l.addFront(p);
+        }
     } else{
-        for(int i=0; i<l.getLength(); i++){
-            if(l[i]>p){
-                l[i]=p;
-                break;
+        for(int i=0; i<l.getLength(); ++i){
+            if(*p<*l[i]){
+                l.addPosition(i,p);
             }
         }
     }
+    
+    return l;
 }

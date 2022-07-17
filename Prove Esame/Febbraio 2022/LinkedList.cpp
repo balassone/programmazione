@@ -273,10 +273,8 @@ LinkedList<NODETYPE>& LinkedList<NODETYPE>::deleteElem(const NODETYPE& e){
     }
     return *this;
 }
-
 template <typename NODETYPE>
 LinkedList<NODETYPE>& LinkedList<NODETYPE>::addPosition(const int& p, const NODETYPE& e){
-    
     if(p<0 || p>getLength()){
         throw std::runtime_error("Index out of bounds");
     }
