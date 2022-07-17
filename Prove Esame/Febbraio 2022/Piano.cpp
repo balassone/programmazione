@@ -1,9 +1,7 @@
 #include "Piano.h"
 #include <string>
 #include <sstream>
-Piano::Piano(){
-    Piano(0,"","",0);
-}
+Piano::Piano() : color{0}, woodtype{""}, supplier {""}, pricingsqm{0} {}
 Piano::Piano(const int& c, const std::string& w, const std::string& s, const float& p) : color{c}, woodtype{w}, supplier{s}, pricingsqm{p} {}
 void Piano::setColor(const int& c){
     color=c;

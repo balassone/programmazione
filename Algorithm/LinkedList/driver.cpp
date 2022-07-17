@@ -14,6 +14,8 @@ int main(){
     ciao.addOrder(8);
     ciao.deleteElem(4);
     ciao[3]=8;
+    ciao.addPosition(3,12);
     cout << ciao[3] << endl;
+    cout << ciao.toString();
     return 0;
 }

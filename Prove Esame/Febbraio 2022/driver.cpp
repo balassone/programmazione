@@ -27,3 +27,40 @@ La funzione insertTable() che inserisce un piano di appoggio nella lista (addOrd
 La funzione summarizeWharehouse()che calcola la somma dei prezzi di tutti i piani di appoggio della lista
 
 */
+#include "LinkedList.h"
+
+#include <iostream>
+//#include "Fabbrica.h"
+#include "Piano.h"
+
+using std::cin;
+using std::cout;
+using std::endl;
+void insertTable(LinkedList<Piano*>& l, Piano* const p);
+int main(){
+    //Fabbrica f;
+    Rotondo a(0,"Pino", "Divani",50,1);
+    Rotondo d(1,"Sciao","Lesgo",60,2);
+    Rettangolare b(1,"Quercia","Poltrone",200,3,5);
+    Triangolare c(2,"Abete","Ske",15,2,10);
+    LinkedList<Piano*> al;
+    insertTable(al,&a);
+    insertTable(al,&b);
+    //insertTable(al,&c);
+    //insertTable(al,&d);
+    cout << al[0]->toString();
+    return 0;
+}
+
+void insertTable(LinkedList<Piano*>& l, Piano* const p){
+    if(l.isEmpty()){
+        l.addFront(p);
+    } else{
+        for(int i=0; i<l.getLength(); i++){
+            if(l[i]>p){
+                l[i]=p;
+                break;
+            }
+        }
+    }
+}

@@ -14,7 +14,7 @@ class Piano{
         const std::string& getSupplier() const;
         void setPricing(const float&);
         const float& getPricing() const;
-        virtual float getArea() const {}
+        virtual float getArea() const = 0;
         bool operator<(const Piano& p);
         bool operator==(const Piano& p){
             if(this==&p) return true;
