@@ -1,0 +1,29 @@
+/*
+Una fabbrica di mobili che produce tavoli deve mantere l’inventario dei piani di appoggio.
+class Piano:
+Ogni piano di appoggio porta delle informazioni sul 
+    colore (codice intero),
+    sul tipo di legno (stringa),
+    sul forintore (stringa),
+    il prezzo (float)  per centimetro quadrato. 
+    
+I piani di appoggio possono essere di tre tipi
+    rotondi,
+    rettangolari o 
+    triangolari.
+:class Rotondo, Rettangolare, Triangolare
+
+Quelli rettangolari avranno una base e un’altezza, cosi’ come quelli triangolari,
+mentre per quelli rotondi dovremo rappresentare il raggio.
+
+L’elenco dei piani di appoggio e’ mantenuto in una lista (di puntatori a Piani) ordinata per area (funzione membro della classe) 
+del piano di appoggio. 
+Ogni volta che si produce un nuovo piano esso viene aggiunto alla lista nella posizione opportuna.
+
+
+Implementare:
+Le strutture  dati  per la rappresentazione  delle informazioni relative ai piani di appoggio
+La funzione insertTable() che inserisce un piano di appoggio nella lista (addOrder)
+La funzione summarizeWharehouse()che calcola la somma dei prezzi di tutti i piani di appoggio della lista
+
+*/
