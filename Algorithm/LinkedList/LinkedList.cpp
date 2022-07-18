@@ -217,7 +217,7 @@ LinkedList<NODETYPE>& LinkedList<NODETYPE>::addOrder(const NODETYPE& e){
         }
         if(curr!=nullptr){
             if(curr==head){
-                Node* n=new Node<NODETYPE>;
+                Node<NODETYPE>* n=new Node<NODETYPE>;
                 n->elem=e;
                 n->next=head;
                 head=n;
