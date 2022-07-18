@@ -106,11 +106,11 @@ std::string LinkedList<NODETYPE>::toString() const{
     return out.str();
 }
 template <typename NODETYPE>
-NODETYPE& LinkedList<NODETYPE>::operator[](int i){
+const NODETYPE& LinkedList<NODETYPE>::operator[](int i) const{
     if(i<0){
         throw std::runtime_error("Index must be positive");
     }
-    if(i>=getLength()){
+    if(i>getLength()){
          throw std::runtime_error("Index out of bounds");
     }
     Node<NODETYPE>* curr=head;
@@ -273,6 +273,7 @@ LinkedList<NODETYPE>& LinkedList<NODETYPE>::deleteElem(const NODETYPE& e){
     }
     return *this;
 }
+
 template <typename NODETYPE>
 LinkedList<NODETYPE>& LinkedList<NODETYPE>::addPosition(const int& p, const NODETYPE& e){
     if(p<0 || p>getLength()){
@@ -289,6 +290,50 @@ LinkedList<NODETYPE>& LinkedList<NODETYPE>::addPosition(const int& p, const NODE
         curr->next=new Node<NODETYPE>;
         curr->next->elem=e;
         curr->next->next=curr->next;
+    }
+    return *this;
+}
+
+//insertBefore
+template <typename NODETYPE>
+LinkedList<NODETYPE>& LinkedList<NODETYPE>::insertBefore(const NODETYPE& e, const NODETYPE& a){
+    if(isEmpty()){
+        throw std::runtime_error("List is empty");
+    }
+    else{
+        Node<NODETYPE>* curr=head;
+        Node<NODETYPE>* prev=nullptr;
+        while(curr!=nullptr && curr->elem!=a){
+            prev=curr;
+            curr=curr->next;
+        }
+        if(curr==nullptr){
+            throw std::runtime_error("Element not found");
+        }
+        else{
+            prev->next=new Node<NODETYPE>;
+            prev->next->elem=e;
+            prev->next->next=curr;
+        }
+    }
+    return *this;
+}
+//insertBack
+template <typename NODETYPE>
+LinkedList<NODETYPE>& LinkedList<NODETYPE>::insertBack(const NODETYPE& e){
+    if(isEmpty()){
+        head=new Node<NODETYPE>;
+        head->elem=e;
+        head->next=nullptr;
+    }
+    else{
+        Node<NODETYPE>* curr=head;
+        while(curr->next!=nullptr){
+            curr=curr->next;
+        }
+        curr->next=new Node<NODETYPE>;
+        curr->next->elem=e;
+        curr->next->next=nullptr;
     }
     return *this;
 }

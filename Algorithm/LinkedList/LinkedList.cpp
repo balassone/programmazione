@@ -200,7 +200,8 @@ LinkedList<NODETYPE>& LinkedList<NODETYPE>::remove(const int& i){
     return *this;
 }
 template<typename NODETYPE>
-//addorder
+
+//addOrder even if list is empty or has one element
 LinkedList<NODETYPE>& LinkedList<NODETYPE>::addOrder(const NODETYPE& e){
     if(isEmpty()){
         head=new Node<NODETYPE>;
@@ -214,23 +215,27 @@ LinkedList<NODETYPE>& LinkedList<NODETYPE>::addOrder(const NODETYPE& e){
             prev=curr;
             curr=curr->next;
         }
-        if(curr==nullptr){
-            prev->next=new Node<NODETYPE>;
-            prev->next->elem=e;
-            prev->next->next=nullptr;
-        }
-        else if(curr->elem==e){
-            throw std::runtime_error("Element already exists");
+        if(curr!=nullptr){
+            if(curr==head){
+                Node* n=new Node<NODETYPE>;
+                n->elem=e;
+                n->next=head;
+                head=n;
+            }
+            else{
+                prev->next=new Node<NODETYPE>;
+                prev->next->elem=e;
+                prev->next->next=curr;
+            }
         }
         else{
             prev->next=new Node<NODETYPE>;
             prev->next->elem=e;
-            prev->next->next=curr;
+            prev->next->next=nullptr;
         }
     }
     return *this;
 }
-
 template <typename NODETYPE>
 int LinkedList<NODETYPE>::search(const NODETYPE& a) const{
     if(isEmpty()){

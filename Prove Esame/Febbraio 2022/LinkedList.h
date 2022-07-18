@@ -16,7 +16,7 @@ public:
     LinkedList<NODETYPE>& removeFront();
     LinkedList<NODETYPE>& reverse();
     std::string toString() const;
-    NODETYPE& operator[](int);
+    const NODETYPE& operator[](int) const;
     LinkedList<NODETYPE>& deleteElem(const NODETYPE& e);
     int getLength() const;
     LinkedList<NODETYPE>& clear();
@@ -26,6 +26,10 @@ public:
     LinkedList<NODETYPE>& addOrder(const NODETYPE&);
     int search(const NODETYPE&) const;
     LinkedList<NODETYPE>& addPosition(const int& p, const NODETYPE& e);
+    //insertBefore
+    LinkedList<NODETYPE>& insertBefore(const NODETYPE& e, const NODETYPE& e2);
+    //insertBack
+    LinkedList<NODETYPE>& insertBack(const NODETYPE& e);
 private:
     Node<NODETYPE>* head;
 };
