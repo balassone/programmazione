@@ -17,7 +17,7 @@ class BSTNode{
 template <typename Key>
 class BST{
     protected:
-        BSTNode<int>* root;
+        BSTNode<Key>* root;
     public:
         BST(BSTNode<Key>* r=nullptr) : root(r){}
         //destructor
@@ -208,5 +208,13 @@ BSTNode<Key>* BST<Key>::deleteNode(BSTNode<Key>* x){
         x->right->parent=y;
     }
     return y;
+}
+template <typename Key>
+void BST<Key>::release(BSTNode<Key>* x){
+    if(x){
+        release(x->left);
+        release(x->right);
+        delete x;
+    }
 }
 #endif
