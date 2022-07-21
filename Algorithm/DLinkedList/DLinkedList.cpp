@@ -153,3 +153,38 @@ DLinkedList<T>& DLinkedList<T>::swap(int i, int j){
     }
     return *this;
 }
+template <typename T>
+int DLinkedList<T>::size() const{
+    int count = 0;
+    DNode<T> *p = header->next;
+    while(p != trailer){
+        count++;
+        p = p->next;
+    }
+    return count;
+}
+template <typename T>
+DLinkedList<T>& DLinkedList<T>::swapOddEven(){
+    if(!empty()){
+        DNode<T> *p = header->next;
+        DNode<T> *q = header->next->next;
+        if(size()%2 == 0){
+            while(p != trailer){
+                T temp = p->elem;
+                p->elem = q->elem;
+                q->elem = temp;
+                p = p->next;
+                q = q->next->next;
+            }
+        }
+        else{
+            while(q != trailer){
+                T temp = p->elem;
+                p->elem = q->elem;
+                q->elem = temp;
+                p = p->next;
+                q = q->next->next;
+            }
+        }
+    }
+}

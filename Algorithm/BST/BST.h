@@ -47,6 +47,7 @@ class BST{
         BSTNode<Key>* deleteNode(BSTNode<Key>* x);
         //Modifiers
         BSTNode<Key>* insert(Key key);
+        BSTNode<Key>* recInsert(BSTNode<Key>* x,Key key);
         void release(BSTNode<Key>* x);
 };
 template <typename Key>
@@ -162,6 +163,21 @@ BSTNode<Key>* BST<Key>::successor(BSTNode<Key>* x){
 }
 
 template <typename Key>
+BSTNode<Key>* BST<Key>::recInsert(BSTNode<Key>* x, Key key){
+    if(x==nullptr){
+        x=new BSTNode<Key>(key);
+    }
+    else if(key<x->key){
+        x->left=recInsert(x->left, key);
+        x->left->parent=x;
+    }
+    else if(key>x->key){
+        x->right=recInsert(x->right, key);
+        x->right->parent=x;
+    }
+    return x;
+}
+template <typename Key>
 BSTNode<Key>* BST<Key>::insert(Key key){
     BSTNode<Key>* z = new BSTNode<Key>(key);
     BSTNode<Key>* y = nullptr;
@@ -182,6 +198,7 @@ BSTNode<Key>* BST<Key>::insert(Key key){
         y->right=z;
     return z;
 }
+//
 template <typename Key>
 //deleteNode
 BSTNode<Key>* BST<Key>::deleteNode(BSTNode<Key>* x){
@@ -214,7 +231,7 @@ void BST<Key>::release(BSTNode<Key>* x){
     if(x){
         release(x->left);
         release(x->right);
-        delete x;
+        delete[] x;
     }
 }
 #endif

@@ -8,6 +8,7 @@ class DLinkedList{
         bool empty() const;
         const T& front() const;
         const T& back() const;
+        int size() const;
         DLinkedList<T>& addFront(const T&);
         DLinkedList<T>& addBack(const T&);
         DLinkedList<T>& removeFront();
@@ -16,6 +17,7 @@ class DLinkedList{
         DLinkedList<T>& addOrder(const T&);
         DLinkedList<T>& bubbleSort();
         DLinkedList<T>& swap(int, int);
+        DLinkedList<T>& swapOddEven();
     private:
         DNode<T> *header;
         DNode<T> *trailer;
