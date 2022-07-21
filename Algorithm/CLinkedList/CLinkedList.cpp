@@ -2,38 +2,38 @@
 #include <sstream>
 
 template <typename T>
-CircleList<T>::CircleList() : cursor{nullptr} {}
+CLinkedList<T>::CLinkedList() : cursor{nullptr} {}
 
 template <typename T>
-CircleList<T>::~CircleList() {
+CLinkedList<T>::~CLinkedList() {
     while (!empty()) {
         remove();
     }
 }
 
 template <typename T>
-bool CircleList<T>::empty() const {
+bool CLinkedList<T>::empty() const {
     return cursor == nullptr;
 }
 
 template <typename T>
-const T& CircleList<T>::front() const {
+const T& CLinkedList<T>::front() const {
     return cursor->next->elem;
 }
 
 template <typename T>
-const T& CircleList<T>::back() const {
+const T& CLinkedList<T>::back() const {
     return cursor->elem;
 }
 
 template <typename T>
-CircleList<T>& CircleList<T>::advance() {
+CLinkedList<T>& CLinkedList<T>::advance() {
     cursor = cursor->next;
     return *this;
 }
 
 template <typename T>
-CircleList<T>& CircleList<T>::add(const T& e) {
+CLinkedList<T>& CLinkedList<T>::add(const T& e) {
     CNode<T> *v = new CNode<T>;
     v->elem = e;
     if (empty()) {
@@ -47,7 +47,7 @@ CircleList<T>& CircleList<T>::add(const T& e) {
 }
 
 template <typename T>
-CircleList<T>& CircleList<T>::remove() {
+CLinkedList<T>& CLinkedList<T>::remove() {
     CNode<T>* old = cursor->next;
     if (old==cursor){
         cursor = nullptr;
@@ -58,7 +58,7 @@ CircleList<T>& CircleList<T>::remove() {
 }
 
 template <typename T>
-std::string CircleList<T>::toString() const {
+std::string CLinkedList<T>::toString() const {
     std::ostringstream out;
     CNode<T>* u = cursor;
     out << "Cursor --> ";
@@ -70,4 +70,40 @@ std::string CircleList<T>::toString() const {
     }
     out << "Cursor";
     return out.str();
+}
+
+template <typename T>
+//bubble sort a circular linked list
+CLinkedList<T>& CLinkedList<T>::sort() {
+    CNode<T>* u = cursor->next;
+    CNode<T>* v = u->next;
+    while (u != cursor) {
+        while (v != cursor) {
+            if (u->elem > v->elem) {
+                T temp = u->elem;
+                u->elem = v->elem;
+                v->elem = temp;
+            }
+            v = v->next;
+        }
+        u = u->next;
+        v = u->next;
+    }
+    return *this;
+}
+template <typename T>
+CLinkedList<T>& CLinkedList<T>::reverse() {
+    CNode<T>* u = cursor->next;
+    CNode<T>* v = u->next;
+    while (u != cursor) {
+        while (v != cursor) {
+            T temp = u->elem;
+            u->elem = v->elem;
+            v->elem = temp;
+            v = v->next;
+        }
+        u = u->next;
+        v = u->next;
+    }
+    return *this;
 }

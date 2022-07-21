@@ -13,6 +13,8 @@ class CLinkedList{
         CLinkedList<T>& advance();
         CLinkedList<T>& add(const T& e);
         CLinkedList<T>& remove();
+        CLinkedList<T>& sort();
+        CLinkedList<T>& reverse();
         std::string toString() const;
     private:
         CNode<T> *cursor;
