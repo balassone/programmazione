@@ -44,7 +44,7 @@ class BST{
         BSTNode<Key>* maximum(BSTNode<Key>* subroot);
         BSTNode<Key>* predecessor(BSTNode<Key>* x);
         BSTNode<Key>* successor(BSTNode<Key>* x);
-        BSTNode<Key>* deleteNode(BSTNode<Key>* x);
+        BSTNode<Key>* deleteNode(BSTNode<Key>*, Key);
         //Modifiers
         BSTNode<Key>* insert(Key key);
         BSTNode<Key>* recInsert(BSTNode<Key>* x,Key key);
@@ -198,34 +198,38 @@ BSTNode<Key>* BST<Key>::insert(Key key){
         y->right=z;
     return z;
 }
-//
+
 template <typename Key>
-//deleteNode
-BSTNode<Key>* BST<Key>::deleteNode(BSTNode<Key>* x){
-    BSTNode<Key>* y;
-    if(!x->left)
-        y=x->right;
-    else if(!x->right)
-        y=x->left;
-    else
-        y=successor(x);
-    if(y->left)
-        y->left->parent=x->parent;
-    if(!x->parent){
-        root=y;
+BSTNode<Key>* BST<Key>::deleteNode(BSTNode<Key>* x, Key key){
+    BSTNode<Key>* z=nullptr;
+    if(!x)
+        return nullptr;
+    if(key<x->key)
+        x->left=deleteNode(x->left, key);
+    else if(key>x->key)
+        x->right=deleteNode(x->right, key);
+    else{
+        if(!x->left){
+            z=x->right;
+            x->right=nullptr;
+            release(x);
+            x=z;
+        }
+        else if(!x->right){
+            z=x->left;
+            x->left=nullptr;
+            release(x);
+            x=z;
+        }
+        else{
+            z=successor(x);
+            x->key=z->key;
+            x->right=deleteNode(x->right, z->key);
+        }
     }
-    else if(x==x->parent->left)
-        x->parent->left=y;
-    else
-        x->parent->right=y;
-    if(x!=y){
-        y->left=x->left;
-        x->left->parent=y;
-        y->right=x->right;
-        x->right->parent=y;
-    }
-    return y;
+    return x;
 }
+
 template <typename Key>
 void BST<Key>::release(BSTNode<Key>* x){
     if(x){
